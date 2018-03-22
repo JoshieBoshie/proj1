@@ -25,7 +25,13 @@ class PokemonsController < ApplicationController
     @pokemon.health = 100
     @pokemon.level = 1
     @pokemon.trainer_id = current_trainer.id
-    redirect_to trainer_path(current_trainer.id)
+    if @pokemon.save
+      redirect_to trainer_path(current_trainer.id)
+    else
+      flash[:error] = @pokemon.errors.full_messages.to_sentence
+      redirect_to pokemons_new_path
+    end
+
   end
 
   def pokemon_params

@@ -1,5 +1,5 @@
 <h3>아구찜~~</h3>
-<%= simple_form_for @pokemon, url: => trainers_path do |f| %>
+<%= simple_form_for @pokemon, :url => create_path do |f| %>
   <%= f.input :name %>
   <%= f.collection_radio_buttons(
     :ndex, (1..649).map {|ndex| [ndex, ndex]}, :first, :last

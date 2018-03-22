@@ -3,6 +3,11 @@
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 
 <% @pokemons = Pokemon.where(trainer_id: @trainer.id)%>
+<% if current_trainer.id == @trainer.id %>
+<div>
+  <%= button_to "Create a new Pokemon!", pokemons_new_path, :class => "button medium", :method => :get %>
+</div>
+<% end %>
 <% @pokemons.each do |pokemon| %>
   <% if pokemon.trainer_id == @trainer.id %>
     <%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %>
