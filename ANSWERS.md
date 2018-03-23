@@ -6,7 +6,7 @@
   The following line creates a button option in which the capture using patch
   is referred to with id:@pokemon as its parameter.
 # Question 3: What would you name your own Pokemon?
-  Cook
+  Cook(I just want a pokemon that can cook)
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
   I passed redirect_to trainer_path(current_trainer.id). This is
   not exactly a path but it is rather, a reroute to a trainer_path need an id for reference.
@@ -20,3 +20,7 @@ Might be out of your control, but it would be real helpful if the error output w
 Having a bunch of mumbo jumbo is really hard to debug versus having the output tell us that
 we didnt do this or that and that you would do that in insert_file_name.
 # Extra credit: Link your Heroku deployed app
+Note: I tried to this, but I think I messed up and there's a bunch of weird stuff
+happening to the app. I'm getting method not allowed, the app link itself doesn't
+open, etc.
+https://mysterious-cliffs-60859.herokuapp.com/
